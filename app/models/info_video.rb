@@ -1,0 +1,2 @@
+class InfoVideo < ApplicationRecord
+end
