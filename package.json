@@ -1,5 +1,7 @@
 {
   "name": "premium",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "videojs-contrib-hls": "^5.14.1"
+  }
 }

@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-image: url('ftb-1920.jpg');
+  background-size: cover;
+  color: #5b5b5b;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+body {
+  margin: 20px 0; 
+}
+
+.faq-wrapper {
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid #f0f0f0;
+  background: #fff;
+  transform: translateZ(0);
+  width: 60vw;
+  @media (max-width: 450px) {
+    width: 94vw;
+  }
+}
+
+iframe {
+  margin-bottom: 20px;
+}
+
+.headline {
+  text-align: center;
+  margin: 20px;
+  color: white;
+}
+
+.fas {
+  margin: 0 15px 0 5px;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+}
+
+.info-video {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 10px;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+label img, label p {
+  display: inline-block;
+  vertical-align: top;
+  @media (max-width: 450px) {
+    padding-right: 8%;
+  }
+}
+
+label img {
+  margin-right: 10px;
+  height: 1.4em;
+}
+
+label p {
+  line-height: 1.4em;
+}
+
+label {
+  position: relative;
+  display: block;
+  margin: 0 0 0 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fff;
+  font-size: 1em;
+  line-height: 1.2em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+label:after {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  margin-top: -10px;
+  height: 20px;
+  content: '>';
+  line-height: 20px;
+  transform: rotate(90deg);
+  @media (max-width: 375px) {
+    margin: 0 -10px;
+  }
+}
+
+section {
+  overflow: hidden;
+  height: 0;
+  transition: .3s all;
+}
+
+#question1:checked ~ label[for*='1']:after,
+#question2:checked ~ label[for*='2']:after,
+#question3:checked ~ label[for*='3']:after,
+#question4:checked ~ label[for*='4']:after {
+  transform: rotate(270deg);
+}
+
+#question1:checked ~ #answer1,
+#question2:checked ~ #answer2,
+#question3:checked ~ #answer3,
+#question4:checked ~ #answer4 {
+  height: auto;
+}
+
+section p {
+  margin: 0;
+  padding: 16px;
+  border-bottom: 1px solid black;
+  color: #999;
+  font-size: 1em;
+  line-height: 1.2em;
+}
